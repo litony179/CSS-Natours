@@ -1,0 +1,35 @@
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(
+      to right,
+      rgba($color-primary-light-green, 0.7),
+      rgba($color-primary-dark-green, 0.7)
+    ),
+    url(../images/header-image.jpg) center/cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  &_logo-container {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  &_logo-white-image {
+    height: 2rem;
+  }
+
+  &_banner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

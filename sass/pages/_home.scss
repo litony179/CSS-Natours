@@ -1,0 +1,108 @@
+.section-about {
+  background-color: $color-grey-0;
+  padding: 17rem 7rem;
+  margin-top: -20vh;
+
+  @include respond(big-screen) {
+    padding: 30rem 7rem;
+    margin-top: -40vh;
+    margin-bottom: -15vh;
+  }
+}
+
+.section-features {
+  padding: 10rem 7rem;
+  background: linear-gradient(
+      to right,
+      rgba($color-primary-light-green, 0.7),
+      rgba($color-primary-dark-green, 0.7)
+    ),
+    url(../images/nat-4.jpg) center/cover;
+  transform: skewY(-7deg);
+  margin-top: -5.5rem;
+
+  //The direct children of .section-features
+  //Only select the first child of the parent div
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tablet-portrait) {
+    padding: 7rem 0;
+  }
+}
+
+.section-tours {
+  background-color: $color-grey-0;
+  padding: 10rem 7rem 8rem 7rem;
+  margin-top: -5.5rem;
+
+  @include respond(tablet-portrait) {
+    padding: 8rem 7rem 6rem 7rem;
+  }
+}
+
+.section-stories {
+  position: relative;
+  padding: 7rem 0;
+
+  @include respond(tablet-portrait) {
+    padding: 5rem 0;
+  }
+}
+
+.section-booking {
+  padding: 10rem 7rem;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-primary-light-green, 0.7),
+    rgba($color-primary-dark-green, 0.7)
+  );
+}
+
+.booking {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../images/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1rem 1rem rgba($color-black, 0.6);
+
+  @include respond(tablet-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 60%,
+        transparent 60%
+      ),
+      url(../images/nat-10.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tablet-portrait) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../images/nat-10.jpg);
+    background-size: cover;
+  }
+
+  &_form {
+    width: 50%;
+    padding: 4rem;
+
+    @include respond(tablet-land) {
+      width: 70%;
+    }
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+    }
+  }
+}
